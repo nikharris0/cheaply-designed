@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="description" content="{{meta_description}}">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="shortcut icon" href="{{asset "/favicon.ico"}}">
+	<link rel="stylesheet" href="{{asset "css/reset.css"}}">
+	<link rel="stylesheet" href="{{asset "css/screen.css"}}">
+	<link href='http://fonts.googleapis.com/css?family=Raleway' rel='stylesheet' type='text/css'>
+	<link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+	<link href='http://fonts.googleapis.com/css?family=Source+Code+Pro' rel='stylesheet' type='text/css'>
+	<title>{{meta_title}}</title>
+	{{ghost_head}}
+</head>
+<body class="{{body_class}}">
+	<div id="heading">
+		<div id="logo">
+			<a href="/">{{@blog.title}}</a>
+			<div id="subheading">
+				{{@blog.description}}
+			</div>
+		</div>
+	</div>
+	<div id="content">
+		<div id="page-info">
+			<a id="articles-link" class="nav-link selected" href="/">Articles</a>
+			<a id="code-link" class="nav-link" href="/code">Code</a>
+			<a id="about-link" class="nav-link" href="/about">About</a>
+		</div>
+		{{{body}}}
+	</div>
+	<div id="footer">
+		<section class="copyright">
+			<a href="{{@blog.url}}">{{@blog.title}}</a> &copy; {{date format="YYYY"}}
+		</section>
+		<section class="poweredby">
+			Proudly published with <a href="https://ghost.org">Ghost</a>
+		</section>
+	</div>
+	{{ghost_foot}}
+	<script type="text/javascript" src="{{asset "js/main.js"}}"></script>
+</body>
+</html>
